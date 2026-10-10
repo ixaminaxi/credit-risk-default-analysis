@@ -56,7 +56,7 @@ SELECT
 FROM clients
 GROUP BY utilisation_band
 ORDER BY utilisation_band;
----- -- Finding: default rate rises from 18.3% (under 25% of limit used) to 30.1% (over 100%), about 1.6x. The 50-75% and 75-100% bands are almost equal (26.0% vs 25.8%).
+-- Finding: default rate rises from 18.3% (under 25% of limit used) to 30.1% (over 100%), about 1.6x. The 50-75% and 75-100% bands are almost equal (26.0% vs 25.8%).
 -- Q6. Default rate by lateness AND credit utilisation together
 SELECT
   CASE
@@ -89,4 +89,4 @@ SELECT
 FROM clients
 GROUP BY payment_status
 ORDER BY payment_status;
--- -- Finding: customers 2+ months late are 10.4% of customers but 32.8% of defaults; 48.3% of defaults come from customers who paid on time or paid the minimum, so lateness alone misses almost half.
+-- Finding: customers 2+ months late are 10.4% of customers but 32.8% of defaults; 48.3% of defaults come from customers who paid on time or paid the minimum, so lateness alone misses almost half.
